@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styleforprojects.css">
+    <link rel="icon" href="img/favicon-16x16.png"> 
+    <title>Projects</title>
+</head>
+<body>
+
+<div id="container">
+    <video id="video-background" autoplay muted loop>
+        <source src="vid/projects.mp4" type="video/mp4">
+    </video>
+
+    <div class="text-frame">
+        <h1>ACHIEVEMENTS AND PROJECTS</h1>
+    </div>
+
+    <div class="image-frame">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img/13 (1).png" alt="Slide 1">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/AI ESSENTIALS_ Unlocking the Power of Artificial Intelligence-1 (1).png" alt="Slide 2">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/CERTIFICATE OF ATTENDANCE - HON EZEKIEL N. BOGNALBAL R9BST-2024-W002-0904-1 (1).png" alt="Slide 3">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/uppercase.png" alt="Slide 4">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/calcu.png" alt="Slide 5">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/dashboard.png" alt="Slide 6">
+            </div>
+
+            <button class="prev" onclick="plusSlides(-1)"><</button>
+            <button class="next" onclick="plusSlides(1)">></button>
+        </div>
+    </div>
+
+    <button>
+        <a href="index.html" class="button">
+            <span class="transition"></span>
+            <span class="gradient"></span>
+            <span class="label">HOME</span>
+        </a>
+    </button>
+</div>
+
+<div class="audio-player">
+    <audio id="audio-player" controls autoplay>
+        <source src="sound/Pokemon RubySapphireEmerald Littleroot Town.mp3" type="audio/mpeg">
+        <source src="sound/Pokemon RubySapphireEmerald Oldale Town.mp3" type="audio/mpeg">
+        <source src="sound/Pokemon RubySapphireEmerald Petalburg City.mp3" type="audio/mpeg">
+        <source src="sound/Pokemon RubySapphireEmerald Rustboro City.mp3" type="audio/mpeg">
+        <source src="sound/Pokemon RubySapphireEmerald Slateport City.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="audio-controls">
+        <button id="prev-button">Prev</button>
+        <button id="next-button">Next</button>
+    </div>
+</div>
+
+<footer>
+    <p>Copyright © 2024 Hon Ezekiel Bognalbal. All rights reserved.</p>
+</footer>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex-1].style.display = "block";  
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const audio = document.getElementById('audio-player');
+        const nextButton = document.getElementById('next-button');
+        const prevButton = document.getElementById('prev-button');
+        
+        // Array of song sources
+        const songs = [
+            "sound/Pokemon RubySapphireEmerald Littleroot Town.mp3",
+            "sound/Pokemon RubySapphireEmerald Oldale Town.mp3",
+            "sound/Pokemon RubySapphireEmerald Petalburg City.mp3",
+            "sound/Pokemon RubySapphireEmerald Rustboro City.mp3",
+            "sound/Pokemon RubySapphireEmerald Slateport City.mp3"
+        ];
+        let currentSongIndex = 0;
+        
+        // Function to play current song
+        function playSong() {
+            audio.src = songs[currentSongIndex];
+            audio.play();
+        }
+        
+        // Next Button
+        nextButton.addEventListener('click', function() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            playSong();
+        });
+        
+        // Prev Button
+        prevButton.addEventListener('click', function() {
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+            playSong();
+        });
+    
+        // Play first song when DOM is loaded
+        playSong();
+    
+        // Automatically play next song when current song ends
+        audio.addEventListener('ended', function() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            playSong();
+        });
+    });    
+</script>
+
+</body>
+</html>

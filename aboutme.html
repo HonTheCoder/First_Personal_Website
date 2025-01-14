@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleaboutme.css">
+    <link rel="icon" href="img/favicon-16x16.png"> 
+    <title>AboutMe</title>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="vid/blackgreyBG.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <nav>
+    <div class="button">
+        <a href="index.html" title="Goes to Home Page" class="button">
+        <span>Home</span>
+        </a>
+    </div>
+    </nav>
+
+    <div class="container">
+        <div class="left-section">
+            <h1>Introduction</h1>
+            <p> Hello! I'm a multidimensional individual who is interested about creating digital experiences and   
+                bringing ideas to life through programming. I'm currently in my second year of studies at Bicol University Polangui, 
+                immersing myself in the exciting world of technology. As a newbie, I'm keen to learn and improve my skills in programming, 
+                web development, and game development. I believe in the value of continual learning and am committed to studying various parts
+                of the technological world. Beyond my current pursuits, I hope to pursue a career in cybersecurity, 
+                motivated by a desire to secure digital assets and defend against growing threats. With a sharp eye for detail and a knack
+                for creativity, I strive to combine functionality with aesthetics to create seamless and engaging user experiences. 
+                Join me on this thrilling voyage as we discover the limitless possibilities of the digital environment!
+            </p>
+
+            <h1>Hobbies</h1>
+            <ul class="hobbies-list">
+                <li>Programming</li>
+                <li>Playing Sports</li>
+                <li>Playing Video Games</li>
+                <li>Sleeping</li>
+                <li>Coder Lover Boy</button></li>
+            </ul>
+
+            <h1>View Resume</h1>
+            <a href="pictureofresume.html">View Resume</a>
+
+
+            <div class="social-icons-wrapper">
+                <div class="social-icons">
+
+                    <!-- GitHub icon -->
+                    <div class="social-icon">
+                        <a href="https://github.com/HonTheCoder" target="_blank">
+                            <img src="img/github.png" class="round" alt="github Logo">
+                        </a>
+                        <p>Github</p>
+                    </div>
+                    
+                    <!-- Instagram icon -->
+                    <div class="social-icon">
+                        <a href="https://www.instagram.com/hon.ezekiel_/" target="_blank">
+                            <img src="img/Instagram_icon.png.webp" class="round" alt="instagram Logo">
+                        </a>
+                        <p>Instagram</p>
+                    </div>
+
+                    <!-- Facebook icon -->
+                    <div class="social-icon">
+                        <a href="https://www.facebook.com/honezekielnoblebognalbal" target="_blank">
+                            <img src="img/Facebook_Logo_2023.png" class="round" alt="facebook Logo">
+                        </a>
+                        <p>Facebook</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="frame">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="img/PictureAC.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="img/PictureAB.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="img/PictureAD (1).jpg" style="width:100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Hon Ezekiel Bognalbal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var slideIndex = 0; // Set the initial slide index
+        
+        // Call the showSlides function to display the first slide
+        showSlides();
+        
+        // Function to advance to the next slide
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        // Function to display the slides
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.opacity = 0; // Set opacity to 0 for all slides
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1} // Reset slide index if it exceeds the number of slides
+            slides[slideIndex-1].style.opacity = 1; // Set opacity to 1 for the current slide
+            setTimeout(showSlides, 3000); // Change slides every 2 seconds (2000 milliseconds)
+        }
+    </script>
+</body>
+</html>

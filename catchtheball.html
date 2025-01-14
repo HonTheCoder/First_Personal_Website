@@ -1,0 +1,86 @@
+<!--This was my idea and i created it. Awkward lol -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+    }
+    
+    #btn {
+        height: 25px;
+        width: 200px;
+        margin-left: calc(50% - 100px); /* Center the button horizontally */
+        position: absolute;
+        border: 50px;
+    }
+
+    #homeLink {
+        position: absolute;
+        top: 0;
+        left: calc(50% + 110px); /* Position the link beside the button */
+        color: white;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+    
+    #target {
+        height: 10px;
+        width: 10px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+    }
+  </style>
+
+  <body>
+    <input type="button" id="btn" value="Start">
+    <a href="index.html" id="homeLink">Home</a>
+    <div id="target"></div>
+
+    
+    <script>
+        let btn = document.getElementById("btn");
+        let target = document.getElementById("target");
+
+        btn.addEventListener('click', start);
+
+        function start() {
+            target.addEventListener('mouseover', win);
+
+            function win() {
+                target.style.backgroundColor = 'rgb(0, 255, 0)';
+                btn.style.backgroundColor = 'rgb(0, 255, 0)';
+                clearInterval(timer);
+            }
+
+            let timer = setInterval(jump, 400);
+            let counter = 0;
+
+            function jump() {
+                target.style.backgroundColor = '';
+                btn.style.backgroundColor = '';
+
+                let x = Math.floor(Math.random() * (1000 - 0 + 1) - 0);
+                let y = Math.floor(Math.random() * (500 - 0 + 1) - 0);
+
+                counter++;
+                target.style.transform = `translate(${x}px, ${y}px)`;
+
+                if (counter === 20) {
+                    target.style.backgroundColor = 'rgb(255, 0, 0)';
+                    btn.style.backgroundColor = 'rgb(255, 0, 0)';
+                    clearInterval(timer);
+                    target.removeEventListener('mouseover', win);
+                }
+            }
+        }
+    </script>
+</body>
+
+</body>
+</html>
