@@ -1,0 +1,388 @@
+.index * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Updated to space-between */
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(23, 12, 53, 0.853);
+    color: #fff;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 960px;
+}
+
+header .profile-container {
+    display: flex;
+    align-items: center;
+}
+
+header .profile-picture {
+    flex: 0 0 150px;
+    margin-right: 20px;
+}
+
+header .profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+header .name-container {
+    padding-right: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+header .name-container h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+header .name-container h4 {
+    margin: 0;
+    color: #97b6ff;
+    font-size: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Move navigation to the right */
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    align-items: center;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: initial;
+    background-image: none;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: Eina01, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    justify-content: center;
+    line-height: 24px;
+    margin: 0;
+    min-height: 64px;
+    outline: none;
+    overflow: visible;
+    padding: 19px 26px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: auto;
+    word-break: keep-all;
+    z-index: 0;
+}
+
+@media (min-width: 768px) {
+    nav a {
+        padding: 19px 32px;
+    }
+}
+
+nav a:before,
+nav a:after {
+    border-radius: 80px;
+}
+
+nav a:before {
+    background-image: linear-gradient(92.83deg, rgba(84, 25, 248, 0.853) 0, rgba(216, 25, 28, 0.853)100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+}
+
+nav a:after {
+    background-color: initial;
+    background-image: linear-gradient(#1c1c1e 0, #141616 100%);
+    bottom: 4px;
+    content: "";
+    display: block;
+    left: 4px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    transition: all 100ms ease-out;
+    z-index: -1;
+}
+
+nav a:hover:not(:disabled):before {
+    background: linear-gradient(92.83deg, rgba(84, 25, 248, 0.853)0%, rgba(216, 25, 28, 0.853) 100%);
+}
+
+nav a:hover:not(:disabled):after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition-timing-function: ease-in;
+    opacity: 0;
+}
+
+nav a:active:not(:disabled) {
+    color: #ccc;
+}
+
+nav a:active:not(:disabled):before {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+nav a:active:not(:disabled):after {
+    background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+}
+
+nav a:disabled {
+    cursor: default;
+    opacity: .24;
+}
+
+
+main {
+    padding: 20px;
+}
+
+main h2 {
+    margin-top: 20px;
+}
+
+main h3 {
+    margin-top: 10px;
+}
+
+main p {
+    margin-bottom: 10px;
+}
+
+main ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main li {
+    margin-bottom: 5px;
+}
+
+main a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#bio {
+    border: 2px solid rgba(208, 49, 52, 0.853); /* Border color can be adjusted */
+    padding: 20px;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 0 10px rgba(208, 49, 52, 0.853); /* Box shadow with color and opacity */
+}
+
+#bio h2 {
+    color: white; /* Change the color code here for the heading text */
+}
+
+#bio p {
+    color: white; /* Change the color code here for the paragraph text */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+.sound-button {
+background: linear-gradient(to bottom right, rgba(84, 25, 248, 0.853), rgba(216, 25, 28, 0.853));
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin: 5px;
+}
+
+.sound-button:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+  
+.sound-button:hover {
+    background-color: #060606;
+}
+
+.sound-button:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.sound-button:active {
+    background-color: #004080;
+}
+
+/*
+This is for game buttons 
+*/
+.gamebutton-container {
+    position:fixed;
+    display: flex;
+    right: 0px;
+    justify-content: flex-end; /* Align to the right */
+    align-items: center;
+    top: 115px; /* Adjust the top position as needed */
+    margin: 110px; /* Remove unnecessary margin */
+    padding: 2em 5em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.gamebutton-container ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.gamebutton-container li {  
+    margin-bottom: 10px;
+}
+
+.gamebutton-container a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 150px;
+    display: block;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Add margin between buttons */
+    border-radius: 10px; /* Apply border-radius to make buttons rounded */
+}
+
+.gamebutton-container a:hover {
+    background-color: #060606;
+}
+/* Add background effect for game buttons */
+.gamebutton-container a:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+/* Keyframes for glowing effect */
+@keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+}
+/* Add background effect for game buttons */
+.gamebutton-container a:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(23, 12, 53, 0.853)
+    ;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+

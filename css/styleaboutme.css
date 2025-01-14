@@ -1,0 +1,301 @@
+.body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Background video */
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  filter: blur(7px);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.hobbies-list {
+  margin-top: 10px;
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+.hobbies-list li {
+  margin-bottom: 5px; /* Add spacing between list items */
+  color: white;
+}
+
+.button{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 9999; /* Ensure the button appears above other content */
+}
+
+.button a{
+  color:#ffffff;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 19px 32px;
+  }
+}
+
+.button:before,
+.button:after {
+  border-radius: 80px;
+}
+
+.button:before {
+  background-image: linear-gradient(92.83deg, #FFD700 0, #FFD700 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button:after {
+  background-color: initial;
+  background-image: linear-gradient(#313131 0, #0c0d0d 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button:hover:not(:disabled):before {
+  background: linear-gradient(92.83deg, #FFD700 0%, #0000FF 100%);
+}
+
+.button:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+.button:active:not(:disabled) {
+  color: #ccc;
+}
+
+.button:active:not(:disabled):before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.button:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0000FF 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button:disabled {
+  cursor: default;
+  opacity: .24;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap to the next line if needed */
+  justify-content: center; /* Center align the icons horizontally */
+  position: absolute; /* Position the icons */
+  bottom: 60px; /* Adjust the distance from the bottom */
+  left: 50%; /* Center the icons horizontally */
+  transform: translateX(-50%); /* Center the icons horizontally */
+
+}
+
+.social-icon {
+  text-align: center;
+  margin-right: 10px; /* Add some space between icons */
+  margin-bottom: 10px; /* Add some space below each row of icons */
+  margin-right: 10px;
+  
+}
+
+.social-icon img {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  margin-bottom: 5px; /* Adjust spacing between icon and text */
+}
+
+.social-icon p {
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Slideshow styles */
+.mySlides {
+  display: block; /* Display the images by default */
+  position: absolute; /* Position the slides absolutely within the slideshow container */
+  width: 100%; /* Make the slides fill the container width */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: opacity 1s; /* Add transition effect for opacity changes */
+}
+
+.mySlides.fade {
+  opacity: 1; /* Set opacity to 1 for the active slide */
+}
+
+.mySlides img {
+  display: block; /* Ensure the images are block elements */
+  width: 100%; /* Make the images fill the container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Container for left-section and frame */
+.container {
+  display: flex; /* Use flexbox for layout */
+}
+
+/* Left side styles */
+.left-section {
+  background-color: transparent; /* Transparent background color */
+  padding: 20px; /* Add some padding for better spacing */
+  flex: 1; /* Allow left-section to grow flexibly */
+  margin-top: 60px;
+}
+
+.left-section h1 {
+  color: #FFD700;
+  text-shadow: 0 0 10px #FFD700;
+}
+
+.left-section p {
+  margin-bottom: 15px; /* Add space between paragraphs */
+}
+
+.left-section a {
+  color: rgb(0, 34, 255); /* Link color */
+  text-decoration: none; /* Remove underline */
+  margin-right: 10px; /* Add space between links */
+}
+
+.left-section a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+p{
+  color:#ffffff;
+}
+
+.left-section a img {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  margin-right: 10px; /* Add some spacing between icons */
+  }
+  
+  /* Round the social media icons */
+  .left-section a img.round {
+  border-radius: 50%; /* Make the images round */
+  }
+
+/* Frame styles */
+.frame {
+  background-color: rgb(255, 255, 255);
+  border: solid 5vmin #ffffff;
+  border-bottom-color: #171717;
+  border-left-color: #110f0f;
+  border-radius: 2px;
+  border-right-color: #0d0c0c;
+  border-top-color: #171717;
+  box-shadow: 0 0 5px 0 rgba(255, 238, 0, 0.25) inset, 0 5px 10px 5px rgba(255, 204, 0, 0.25);
+  box-sizing: border-box;
+  margin: 10vh 8vh 10vh auto; /* Adjust the margin to position it on the right */
+  max-width: 50%; /* Limit the maximum width of the frame */
+  height: 70vh;
+  width: 70vh;
+  padding: 8vmin;
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* Ensure the overflow is hidden */
+  margin-top: 6%;
+  
+  /* Center the slideshow container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  margin-right: 137%;
+  height: 140%;
+}
+
+.frame img {
+  max-width: 100%; /* Make the image responsive within the frame */
+  height: auto; /* Ensure the height adjusts automatically */
+  object-fit: cover; /* Ensure the entire image is covered by the frame */
+  margin-top: 5px;
+  margin-left: 1px;
+}
+
+/* Footer styles */
+footer {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: #ffffff; /* White text color */
+  padding: 20px; /* Add padding for better appearance */
+  text-align: center; /* Center align the text */
+  position: fixed; /* Fixed positioning to keep it at the bottom of the viewport */
+  bottom: 0; /* Align the footer to the bottom of the viewport */
+  width: 100%; /* Make the footer span the full width of the viewport */
+}
+
+footer p {
+  margin: 0;
+}
