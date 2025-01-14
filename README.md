@@ -12,8 +12,11 @@ Details about me, including my resume, skills, and interests.
 
 ✨ Features
 🎮 Fun Mini-Games: Play interactive games like Catch the Ball, Snake, and Tic-Tac-Toe.
+
 🖼️ About Me: A dedicated section to get to know me better.
+
 📄 Resume Showcase: A visual representation of my professional experience.
+
 💻 Projects Page: Highlights of my coding journey and achievements.
 
 🔧 Tech Stack
