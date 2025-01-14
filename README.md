@@ -1,7 +1,7 @@
 🌐 My Personal Website
 Welcome to my personal website! This is my first-ever website, created while I was still learning the art of web development. It's a showcase of my progress and passion, and I'm always craving more knowledge and open to learning new skills.
 
-🔗 Live Demo: My Personal Website
+🔗 Live Demo: https://honthecoder.netlify.app/
 
 💡 About This Website
 This site is a reflection of my journey as a developer, featuring:
