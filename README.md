@@ -25,6 +25,7 @@ CSS3: Styling and responsive design
 JavaScript: Interactivity and game logic
 
 📜 License
+
 This project is licensed under the MIT License.
 
 💡 Credits
