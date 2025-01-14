@@ -20,8 +20,11 @@ Details about me, including my resume, skills, and interests.
 💻 Projects Page: Highlights of my coding journey and achievements.
 
 🔧 Tech Stack
+
 HTML5: Structure and content
+
 CSS3: Styling and responsive design
+
 JavaScript: Interactivity and game logic
 
 📜 License
